@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   	background: url(https://picsum.photos/id/366/1600/900);
+
+}
+body {
+	
+}
+header{
+	background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    align-items: center;
+    background-image: url(../img/pattern-02.png);
+    display: flex;
+    justify-content: space-between;
+}
+header nav {
+	width: 30%;
+	font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    
+}
+header nav a {
+	color: white;
+	text-decoration: none;
+}
+header div{
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+	height: 5em;
+	border-color: black;
+}
+header div img{
+	height: 5em;
+}
+.desplegable::after {
+	content: "";
+	display: inline-block;
+	background-image: url(img/arrow.svg);
+	background-repeat: no-repeat;
+	background-size: auto;
+	width: 0.7em;
+	height: 0.7em;
+}
