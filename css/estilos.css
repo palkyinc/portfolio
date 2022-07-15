@@ -2,39 +2,42 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-   	background: url(https://picsum.photos/id/366/1600/900);
-
+   	color: white;
+   	font-family: 'Oswald', sans-serif;
 }
 body {
-	
+    height: 100%;
+   	background: url(https://picsum.photos/id/366/1600/900);
+   	background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+}
+a:hover {
+	color: red;
+	font-size: 125%;
 }
 header{
+	display: flex;
 	background-color: rgba(0, 0, 0, 0.3);
     padding: 1rem;
     align-items: center;
-    background-image: url(../img/pattern-02.png);
-    display: flex;
     justify-content: space-between;
+    background-image: url(../img/pattern-02.png);
+	font-size: 1.7em;
+	height: 5em;
 }
 header nav {
-	width: 30%;
-	font-size: 1.5em;
-    display: flex;
-    justify-content: space-between;
-    
 }
 header nav a {
 	color: white;
-	text-decoration: none;
+	padding: 1rem;
+    text-decoration: none;
 }
-header div{
-	background-color: rgba(0, 0, 0, 0.3);
+header img{
 	border-radius: 50%;
-	height: 5em;
-	border-color: black;
-}
-header div img{
-	height: 5em;
+	height: 4em;
 }
 .desplegable::after {
 	content: "";
@@ -44,4 +47,69 @@ header div img{
 	background-size: auto;
 	width: 0.7em;
 	height: 0.7em;
+}
+main {
+	height: 50%;
+	overflow: auto;
+}
+main article {
+	margin: 2em;
+	margin-right: 15%;
+	margin-left: 15%;
+	border-width: 1px;
+	border-color: gray;
+	border-style: solid;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+main article h2{
+	text-align: center;
+	font-size: 3em;
+}
+main article p, main article h3{
+
+	font-variant: small-caps;
+	margin: 2rem;
+}
+main article p {
+	font-size: 1.25em;
+}
+main article h3 {
+	font-size: 1.5em;
+}
+.proyects {
+	border-style: inset;
+	border-color: lightblue;
+	margin: 1em;
+}
+.proyects h3 {
+	font-size: 2em;
+	margin: 1em;
+}
+.proyects p, main a {
+	font-size: 1.15em;
+	margin: 1em;
+	text-decoration: none;
+}
+.knowledge, .contact {
+	display: flex;
+	margin: 1em;
+}
+.knowledge img, .contact a img {
+	height: 4em;
+	margin: 0.5em;
+}
+footer {
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.4);
+	background-image: url(../img/palkyLogo1.png);
+	height: 3em;
+	justify-content: center;
+	align-items: center;
+}
+footer p , footer img{
+	margin-left: 1em;
+	margin-right: 1em;
+}
+footer img {
+	height: 2em;
 }

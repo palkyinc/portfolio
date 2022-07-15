@@ -2,21 +2,85 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>labora clase 4</title>
+	<title>Portfolio</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+	
 	<header>
+		<p>Miguel Pereyra</p>
 		<nav>
-			<a href="#">Inicio</a>
-			<a href="#" class="desplegable">Servicios</a>
-			<a href="#" class="desplegable">Contacto</a>
+			<a href="#about">Sobre mi</a>
+			<a href="#proyects">Proyectos</a>
+			<a href="#knowledge">Conocimientos</a>
+			<a href="#contact">Contacto</a>
 		</nav>
-		<div>
-			
-		</div>
-		<!-- ul>li*5 -->
+		<nav>
+			<a href="#">Español</a>
+			|
+			<a href="#">English</a>
+		</nav>
+		<img src="img/IMG_5609.jpg" alt="Foto perfil">
 	</header>
+
+	<main>
+		<article>
+			<h2 id="about">Sobre mi</h2>
+			<p>Soy Analista de sistemas y Técnico Electrónico. Mi mayor experiencia laboral la he conseguido en el sector de Infraestructura-IT. Desde hace dos años he dado un giro hacia el desarrollo web. Me considero autodidactica, perseverante y apasionado en la resolución de problemas. Me siento más cómodo trabajando en equipo, pero me desempeño en proyectos en solitario sin problemas. Mis aptitudes más fuertes son PHP y Laravel pero también poseo conocimientos en otras tecnologías complementarias. Actualmente resido en Rio Grande, Tierra del Fuego, Argentina; mi disponibilidad es para trabajos remotos.</P>
+		</article>
+		<article>
+			<h2 id="proyects">Proyectos</h2>
+			<div class="proyects">
+				<h3>Slam (2020-2022)</h3>
+				<a href="https://github.com/palkyinc/Comfueg" target="_blank">Ir al repositorio Github del proyecto</a>
+				<p>Descripción del problema:</p>
+				<p>Este es un proyecto que realicé como freelance sin otra participación, el objetivo es una aplicación web para la administración de un pequeño WISP. El principal problema a solucionar era poder gestionar y programar equipos Ubiquiti y Mikrotik de forma remota y automática, ya que se realizaba de manera manual, lo cual hacia la administración costosa en tiempo y con muchas posibilidades de error. Otros problemas adicionales a resolver fueron: registro de reclamos de clientes, incidencias y deudas técnicas globales; historial de tráfico de datos por cliente, historial de medición de estado de enlace de radio, monitoreo de enlaces a proveedores, inventario e historial de equipos. Otro desafío importante fue el hospedaje de la aplicación, ya que tiene que contactar a los equipos a programar de manera local.</p>
+				<p>Resolución:</p>
+				<p>Para el hosting decidí utilizar un servidor HP proliant con un Linux Alpine como sistema operativo. Con Docker generé dos contenedores, en uno con Apache, en el otro un servidor MySQL. La aplicación fue desarrollada principalmente con PHP-Laravel. Las vistas fueron trabajadas con Bootstrap, pero no me enfoque demasiado en el aspecto visual. Los gráficos de consumos de ancho de banda, son genrados con el complemento Chartisan. He diseña algunas vistas de formularios con Vue.js ya que deseaba que fuesen agiles e interactivas para el operador. Las vistas han sido filtradas por roles, y estos se asignan a usuarios. Los pedidos de información desde la aplicación hacia los equipos Ubiquiti se realizan a través de web services pero la programación se realiza con CLI enviados por SSH. En el caso de Mikrotik toda la comunicación se realiza por medio de la API que ofrecen estos dispositivos. La aplicación cuenta con una solución ante desastres debido a que el servidor no está en un cloud hosting. Diariamente se realiza un backup de la base de datos y los archivos que el sistema almacena, como imágenes y archivos de datos generados por los consumos de los clientes. El backup es comprimido y diariamente almacenado en la nube con una cuenta de google drive. También se realizó una vista donde se testea el estado del radioenlace de un cliente, esto se produce a demanda no automáticamente. El sistema genera email con reportes de incidentes pendiente, caídas de enlaces e informe de realización del backup. He utilizado el repositorio Git para la wiki de la aplicación utilizando Markdown.</p>
+			</div>
+		</article>
+		<article>
+			<h2 id="knowledge">Conocimientos</h2>
+			<h3>Mi perfil es: Fullstack (BE-Heavy)</h3>
+			<p>Con mayor dominio en:</p>
+			<div class="knowledge">
+				<img src="img/4373205_laravel_logo_logos_icon.svg" alt="logo laravel">
+				<img src="img/4518869_php_icon.svg" alt="logo php">
+			</div>
+			<h3>Con buenos conocimientos en:</h3>
+			<div class="knowledge">
+				<img src="img/317755_badge_html_html5_achievement_award_icon.svg" alt="logo html5">
+				<img src="img/317756_badge_css_css3_achievement_award_icon.svg" alt="logo ccs3">
+				<img src="img/652581_code_command_develop_javascript_language_icon.svg" alt="logo javascript">
+				<img src="img/1012821_code_development_logo_mysql_icon.svg" alt="logo MySQL">
+				<img src="img/8666135_bootstrap_icon.svg" alt="logo bootstrap">
+				<img src="img/4375161_logo_vuejs_icon.svg" alt="logo vue.js">
+				<img src="img/2993773_git_social media_icon.svg" alt="logo git">
+				<img src="img/4373190_docker_logo_logos_icon.svg" alt="logo docker">
+			</div>
+		</article>
+		<article>
+			<h2 id="contact">Contacto</h2>
+			<p>Si considerás que aplico para algún proyecto contactame por:</p>
+			<div class="contact">
+				<a href="https://linkedin.com/in/miguel-pereyra-39545613" target="-blank">
+					<img src="img/317725_linkedin_social_icon.svg" alt="logo linkedin">
+				</a>
+				<!-- <a href="#">
+					<img src="img/4375108_logo_telegram_icon.svg" alt="logo telegram">
+				</a> -->
+			</div>
+		</article>
+	</main>
+	
+	<footer>
+		<img src="img/android-chrome-512x512.png" alt="logo marca">
+		<p>&copyPalkyinc. 2022</p>
+	</footer>
 	
 </body>
 </html>
