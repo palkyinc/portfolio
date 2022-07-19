@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,10 +20,13 @@ a:hover {
 	color: red;
 	font-size: 125%;
 }
+p::first-letter {
+	font-size: 1.25em;
+}
 header{
 	display: flex;
 	background-color: rgba(0, 0, 0, 0.3);
-    padding: 1rem;
+    padding: 1em;
     align-items: center;
     justify-content: space-between;
     background-image: url(../img/pattern-02.png);
@@ -32,8 +37,45 @@ header nav {
 }
 header nav a {
 	color: white;
-	padding: 1rem;
+	padding: 0.5em;
     text-decoration: none;
+}
+.selected{
+	color: green;
+    text-decoration: none;
+}
+.selected:hover {
+	color: green;
+	font-size: 100%;
+}
+.pl-05 {
+	padding-left: 0.5em;
+}
+.botones{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.serbianFlag {
+	background-image: url(../img/banderas.png);
+	background-repeat: no-repeat;
+	background-position: -13px -14px;
+	height: 1em;
+	width: 1.5em;
+}
+.englishFlag {
+	background-image: url(../img/banderas.png);
+	background-repeat: no-repeat;
+	background-position: -395px -14.8px;
+	height: 1em;
+	width: 1.5em;
+}
+.spanishFlag {
+	background-image: url(../img/banderas.png);
+	background-repeat: no-repeat;
+	background-position: -394px -157px;
+	height: 1em;
+	width: 1.5em;
 }
 header img{
 	border-radius: 50%;
@@ -53,9 +95,7 @@ main {
 	overflow: auto;
 }
 main article {
-	margin: 2em;
-	margin-right: 15%;
-	margin-left: 15%;
+	margin: 2em 15%;
 	border-width: 1px;
 	border-color: gray;
 	border-style: solid;
@@ -68,7 +108,7 @@ main article h2{
 main article p, main article h3{
 
 	font-variant: small-caps;
-	margin: 2rem;
+	margin: 2em;
 }
 main article p {
 	font-size: 1.25em;
@@ -93,6 +133,7 @@ main article h3 {
 .knowledge, .contact {
 	display: flex;
 	margin: 1em;
+	justify-content: center;
 }
 .knowledge img, .contact a img {
 	height: 4em;
@@ -112,4 +153,7 @@ footer p , footer img{
 }
 footer img {
 	height: 2em;
+}
+.ocultar {
+	display: none;
 }
