@@ -7,6 +7,9 @@
    	color: white;
    	font-family: 'Oswald', sans-serif;
 }
+
+/* BODY */
+
 body {
     height: 100%;
    	background: url(https://picsum.photos/id/366/1600/900);
@@ -23,6 +26,9 @@ a:hover {
 p::first-letter {
 	font-size: 1.25em;
 }
+
+/* HEADER */
+
 header{
 	display: flex;
 	background-color: rgba(0, 0, 0, 0.3);
@@ -31,9 +37,12 @@ header{
     justify-content: space-between;
     background-image: url(../img/pattern-02.png);
 	font-size: 1.7em;
-	height: 5em;
-}
-header nav {
+	height: 20%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 2;
 }
 header nav a {
 	color: white;
@@ -77,9 +86,33 @@ header nav a {
 	height: 1em;
 	width: 1.5em;
 }
+header .hamburger img {
+
+	height: 1.5em;
+	border-radius: 0%;
+	display: none;
+}
+header .hamburger img:hover + ul{
+	background-color: gray;
+	display: block;
+}
+/* header .hamburger ul {
+	display: none;
+} */
+header .hamburger ul {
+	position: absolute;
+	background-color: grey;
+	border: 1px lightgray solid;
+	list-style-type: none;
+	left: 43%;
+	display: none;
+}
+header .hamburger ul:hover {
+	display: block;
+}
 header img{
 	border-radius: 50%;
-	height: 4em;
+	height: 120%;
 }
 .desplegable::after {
 	content: "";
@@ -90,8 +123,14 @@ header img{
 	width: 0.7em;
 	height: 0.7em;
 }
+
+/* MAIN */
+
 main {
-	height: 50%;
+	height: 73%;
+	position: absolute;
+	top: 20%;
+	left: 0px;
 	overflow: auto;
 }
 main article {
@@ -132,6 +171,7 @@ main article h3 {
 }
 .knowledge, .contact {
 	display: flex;
+	flex-wrap: wrap;
 	margin: 1em;
 	justify-content: center;
 }
@@ -139,13 +179,20 @@ main article h3 {
 	height: 4em;
 	margin: 0.5em;
 }
+
+/* FOOTER */
+
 footer {
 	display: flex;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.8);
 	background-image: url(../img/palkyLogo1.png);
-	height: 3em;
+	height: 7%;
+	width: 100%;
 	justify-content: center;
 	align-items: center;
+	position: fixed;
+	left: 0px;
+	bottom: 0%;
 }
 footer p , footer img{
 	margin-left: 1em;
@@ -154,6 +201,39 @@ footer p , footer img{
 footer img {
 	height: 2em;
 }
-.ocultar {
-	display: none;
+
+@media (max-width: 1200px) {
+	header {
+		font-size: 125%;
+	}
+	main,
+	footer {
+		font-size: 80%;
+	}
+	header img {
+		height: 100%;
+	}
+}
+@media (max-width: 900px) {
+	header {
+		font-size: 100%;
+	}
+	main,
+	footer {
+		font-size: 70%;
+	}
+	header img {
+		height: 80%;
+	}
+}
+@media (max-width: 700px) {
+	.barra, .botones {
+		display: none;
+	}
+		header .hamburger img{
+		display: inline;
+	}
+	header {
+		height: 15%;
+	}
 }
