@@ -93,7 +93,7 @@ header .hamburger img {
 	display: none;
 }
 header .hamburger img:hover + ul{
-	background-color: gray;
+	background-color: rgba(127, 127, 127, 0.95);
 	display: block;
 }
 /* header .hamburger ul {
@@ -101,7 +101,7 @@ header .hamburger img:hover + ul{
 } */
 header .hamburger ul {
 	position: absolute;
-	background-color: grey;
+	background-color: rgba(127, 127, 127, 0.95);
 	border: 1px lightgray solid;
 	list-style-type: none;
 	left: 43%;
