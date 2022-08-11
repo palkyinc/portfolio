@@ -8,6 +8,7 @@
    	font-family: 'Oswald', sans-serif;
 }
 
+
 /* BODY */
 
 body {
@@ -96,9 +97,6 @@ header .hamburger img:hover + ul{
 	background-color: rgba(127, 127, 127, 0.95);
 	display: block;
 }
-/* header .hamburger ul {
-	display: none;
-} */
 header .hamburger ul {
 	position: absolute;
 	background-color: rgba(127, 127, 127, 0.95);
@@ -132,6 +130,7 @@ main {
 	top: 20%;
 	left: 0px;
 	overflow: auto;
+	scroll-behavior: smooth;
 }
 main article {
 	margin: 2em 15%;
@@ -202,13 +201,8 @@ footer img {
 }
  
 @media (max-width: 1200px) {
-	header {
-		font-size: 125%;
-	}
-
-	main,
-	footer {
-		font-size: 80%;
+	body{
+		font-size: 78%;
 	}
 
 	header img {
@@ -216,12 +210,8 @@ footer img {
 	}
 }
 @media (max-width: 900px) {
-	header {
-		font-size: 100%;
-	}
-	main,
-	footer {
-		font-size: 70%;
+	body {
+		font-size: 58%;
 	}
 	header img {
 		height: 80%;
